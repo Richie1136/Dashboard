@@ -1,10 +1,12 @@
 import './App.css';
+import { useEffect } from 'react'
+import { Routes, Route } from 'react-router-dom'
+import { FiSettings } from 'react-icons/fi'
+import { TooltipComponent } from '@syncfusion/ej2-react-popups'
 
 function App() {
   return (
-    <div className="App">
-      <h2>Google</h2>
-    </div>
+    <h1 className="underline text-3xl">Google</h1>
   );
 }
 
