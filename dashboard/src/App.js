@@ -3,6 +3,7 @@ import { useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { FiSettings } from 'react-icons/fi'
 import { TooltipComponent } from '@syncfusion/ej2-react-popups'
+import { LineChart, AreaChart, PieChart, BarChart, FinancialChart, ColorMappingChart, Pyramid, Stacked } from './components/index'
 
 function App() {
 
@@ -46,14 +47,14 @@ function App() {
           <Route path='/editor' element="Editor" />
           <Route path='/calendar' element="Calendar" />
           <Route path='/color-picker' element="ColorPicker" />
-          <Route path='/line' element="Line" />
-          <Route path='/area' element="Area" />
-          <Route path='/bar' element="Bar" />
-          <Route path='/pie' element="Pie" />
-          <Route path='/financial' element="Financial" />
-          <Route path='/color-mapping' element="ColorMapping" />
-          <Route path='/pyramid' element="Pyramid" />
-          <Route path='/stacked' element="Stacked" />
+          <Route path='/line' element={<LineChart />} />
+          <Route path='/area' element={<AreaChart />} />
+          <Route path='/bar' element={<BarChart />} />
+          <Route path='/pie' element={<PieChart />} />
+          <Route path='/financial' element={<FinancialChart />} />
+          <Route path='/color-mapping' element={<ColorMappingChart />} />
+          <Route path='/pyramid' element={<Pyramid />} />
+          <Route path='/stacked' element={<Stacked />} />
         </Routes>
       </div>
     </div>
