@@ -5,6 +5,9 @@ import { FiSettings } from 'react-icons/fi'
 import { TooltipComponent } from '@syncfusion/ej2-react-popups'
 
 function App() {
+
+  const isMenuActive = false
+
   return (
     <div className='flex relative dark:bg-main-dark-bg'>
       <div className='fixed right-4 bottom-4' style={{ zIndex: '1000' }}>
@@ -16,7 +19,21 @@ function App() {
           </button>
         </TooltipComponent>
       </div>
-    </div>
+      {isMenuActive ? (
+        <div className='w-72 fixed sidebar dark:bg-secondary-daek-bg bg-white'>
+          SideBar
+        </div>
+      ) : (
+        <div className='w-0 secondary-dark-bg'>
+          SideBar
+        </div>
+      )}
+      <div className={
+        `dark-bg-main-bg bg-main-bg min-h-screen w-full ${isMenuActive ? 'md:ml-72' : 'flex-2'}`
+      }>
+
+      </div>
+    </div >
   );
 }
 
