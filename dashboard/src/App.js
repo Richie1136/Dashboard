@@ -56,7 +56,7 @@ function App() {
           <Route path='/stacked' element="Stacked" />
         </Routes>
       </div>
-    </div >
+    </div>
   );
 }
 
