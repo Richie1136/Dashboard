@@ -20,3 +20,12 @@ export { default as LineChart } from '../pages/linechart/LineChart'
 export { default as PieChart } from '../pages/piechart/PieChart'
 export { default as Pyramid } from '../pages/pyramid/Pyramid'
 export { default as Stacked } from '../pages/stacked/Stacked'
+export { default as ColorPicker } from '../pages/colorpicker/ColorPicker'
+export { default as Customers } from '../pages/customers/Customers'
+export { default as Ecommerce } from '../pages/ecommerce/Ecommerce'
+export { default as Editor } from '../pages/editor/Editor'
+export { default as Employees } from '../pages/employees/Employees'
+export { default as KanBan } from '../pages/kanban/KanBan'
+export { default as Orders } from '../pages/orders/Orders'
+
+
