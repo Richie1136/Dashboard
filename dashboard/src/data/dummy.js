@@ -9,36 +9,36 @@ import { HiOutlineRefresh } from 'react-icons/hi';
 import { TiTick } from 'react-icons/ti';
 import { GiLouvrePyramid } from 'react-icons/gi';
 import { GrLocation } from 'react-icons/gr';
-import avatar from './avatar.jpg';
-import avatar2 from './avatar2.jpg';
+import avatar from './avatar.jpeg';
+import avatar2 from './avatar2.jpeg';
 import avatar3 from './avatar3.png';
-import avatar4 from './avatar4.jpg';
-import product1 from './product1.jpg';
-import product2 from './product2.jpg';
-import product3 from './product3.jpg';
-import product4 from './product4.jpg';
-import product5 from './product5.jpg';
-import product6 from './product6.jpg';
-import product7 from './product7.jpg';
-import product8 from './product8.jpg';
+import avatar4 from './avatar4.jpeg';
+import product1 from './product1.jpeg';
+import product2 from './product2.jpeg';
+import product3 from './product3.jpeg';
+import product4 from './product4.jpeg';
+import product5 from './product5.jpeg';
+import product6 from './product6.jpeg';
+import product7 from './product7.jpeg';
+import product8 from './product8.jpeg';
 
-export const gridOrderImage = (props) => (
+export const gridOrderImage = ({ ProductImage }) => (
   <div>
     <img
       className="rounded-xl h-20 md:ml-3"
-      src={props.ProductImage}
+      src={ProductImage}
       alt="order-item"
     />
   </div>
 );
 
-export const gridOrderStatus = (props) => (
+export const gridOrderStatus = ({ StatusBg, Status }) => (
   <button
     type="button"
-    style={{ background: props.StatusBg }}
+    style={{ background: StatusBg }}
     className="text-white py-1 px-2 capitalize rounded-2xl text-md"
   >
-    {props.Status}
+    {Status}
   </button>
 );
 
@@ -68,21 +68,21 @@ export const kanbanGrid = [
     allowToggle: true
   },
 ];
-const gridEmployeeProfile = (props) => (
+const gridEmployeeProfile = ({ EmployeeImage, Name }) => (
   <div className="flex items-center gap-2">
     <img
       className="rounded-full w-10 h-10"
-      src={props.EmployeeImage}
+      src={EmployeeImage}
       alt="employee"
     />
-    <p>{props.Name}</p>
+    <p>{Name}</p>
   </div>
 );
 
-const gridEmployeeCountry = (props) => (
+const gridEmployeeCountry = ({ Country }) => (
   <div className="flex items-center justify-center gap-2">
     <GrLocation />
-    <span>{props.Country}</span>
+    <span>{Country}</span>
   </div>
 );
 export const EditorData = () => (
@@ -127,24 +127,24 @@ export const EditorData = () => (
     </h3>
   </div>
 );
-const customerGridImage = (props) => (
+const customerGridImage = ({ CustomerEmail, CustomerImage, CustomerName }) => (
   <div className="image flex gap-4">
     <img
       className="rounded-full w-10 h-10"
-      src={props.CustomerImage}
+      src={CustomerImage}
       alt="employee"
     />
     <div>
-      <p>{props.CustomerName}</p>
-      <p>{props.CustomerEmail}</p>
+      <p>{CustomerName}</p>
+      <p>{CustomerEmail}</p>
     </div>
   </div>
 );
 
-const customerGridStatus = (props) => (
+const customerGridStatus = ({ StatusBg, Status }) => (
   <div className="flex gap-2 justify-center items-center text-gray-700 capitalize">
-    <p style={{ background: props.StatusBg }} className="rounded-full h-3 w-3" />
-    <p>{props.Status}</p>
+    <p style={{ background: StatusBg }} className="rounded-full h-3 w-3" />
+    <p>{Status}</p>
   </div>
 );
 export const areaPrimaryXAxis = {
