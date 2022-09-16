@@ -8,7 +8,7 @@ import { NavBar, Footer, SideBar, ThemeSettings } from './components/index'
 
 function App() {
 
-  const isMenuActive = false
+  const isMenuActive = true
 
   return (
     <div className='flex relative dark:bg-main-dark-bg'>

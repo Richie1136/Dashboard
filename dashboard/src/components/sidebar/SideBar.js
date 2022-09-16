@@ -6,8 +6,19 @@ import { TooltipComponent } from "@syncfusion/ej2-react-popups"
 import { links } from '../../data/dummy'
 
 const SideBar = () => {
+
+  const isActiveMenu = true
+
   return (
-    <div>SideBar</div>
+    <div className="ml-3 h-screen md:overflow-hidden overflow-auto md:hover:overflow-auto pb-10">
+      {isActiveMenu && (<>
+        <div className="flex justify-between items-center">
+          <Link to='/' className="items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tracking-tight dark:text-white text-slate-900" onClick={() => { }}>
+            <SiShopware /> <span>Shopp</span>
+          </Link>
+        </div>
+      </>)}
+    </div>
   )
 }
 
