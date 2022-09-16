@@ -38,8 +38,10 @@ const SideBar = () => {
                 <NavLink to={`/${item.name}`} key={item.name} onClick={() => { }}
                   className={({ isActive }) => isActive ? activeLink : normalLink}
                 >
-
-
+                  {item.icon}
+                  <span className="capitalize">
+                    {item.name}
+                  </span>
                 </NavLink>
               ))}
             </div>
@@ -47,7 +49,7 @@ const SideBar = () => {
         </div>
       </>)
       }
-    </div >
+    </div>
   )
 }
 
