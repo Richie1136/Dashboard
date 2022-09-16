@@ -16,6 +16,7 @@ export const ContextProvider = ({ children }) => {
 
   const context = {
     activeMenu,
+    setActiveMenu
   }
 
   return (

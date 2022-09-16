@@ -5,10 +5,11 @@ import { FiSettings } from 'react-icons/fi'
 import { TooltipComponent } from '@syncfusion/ej2-react-popups'
 import { LineChart, AreaChart, PieChart, BarChart, FinancialChart, ColorMappingChart, Pyramid, Stacked, Employees, Orders, Calendar, Customers, KanBan, Ecommerce, ColorPicker, Editor } from './components/index'
 import { NavBar, Footer, SideBar, ThemeSettings } from './components/index'
+import { useStateContext } from './contexts/ContextProvider'
 
 function App() {
 
-  const isMenuActive = true
+  const { activeMenu } = useStateContext()
 
   return (
     <div className='flex relative dark:bg-main-dark-bg'>
@@ -21,7 +22,7 @@ function App() {
           </button>
         </TooltipComponent>
       </div>
-      {isMenuActive ? (
+      {activeMenu ? (
         <div className='w-72 fixed sidebar dark:bg-secondary-daek-bg bg-white'>
           <SideBar />
         </div>
@@ -31,7 +32,7 @@ function App() {
         </div>
       )}
       <div className={
-        `dark-bg-main-bg bg-main-bg min-h-screen w-full ${isMenuActive ? 'md:ml-72' : 'flex-2'}`
+        `dark-bg-main-bg bg-main-bg min-h-screen w-full ${activeMenu ? 'md:ml-72' : 'flex-2'}`
       }>
         <div className='fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full'>
           <NavBar />
