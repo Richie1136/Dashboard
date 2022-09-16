@@ -25,11 +25,8 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => {
 
 const NavBar = () => {
 
-  const { activeMenu, setActiveMenu } = useStateContext()
+  const { activeMenu, setActiveMenu, isClicked, setIsClicked, handleClick } = useStateContext()
 
-  const handleClick = () => {
-
-  }
 
 
 
@@ -46,9 +43,14 @@ const NavBar = () => {
               <span className='text-gray-400 text-14'>Hi,</span> {' '}
               <span className='text-gray-400 font-bold ml-1 text-14'>Michael</span>
             </p>
+            <MdKeyboardArrowDown className='text-gray-400 text-14' />
             <img className='rounded-full w-8 h-8' src={avatar} alt='avatar' />
           </div>
         </TooltipComponent>
+        {isClicked.cart && <Cart />}
+        {isClicked.chat && <Chat />}
+        {isClicked.notification && <Notification />}
+        {isClicked.userProfile && <UserProfile />}
       </div>
     </div>
   )
