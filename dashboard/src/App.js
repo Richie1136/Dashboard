@@ -37,27 +37,27 @@ function App() {
         <div className='fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full'>
           <NavBar />
         </div>
-      </div>
-      <div>
-        <Routes>
-          <Route path='/' element={<Ecommerce />} />
-          <Route path='/ecommerce' element={<Ecommerce />} />
-          <Route path='/orders' element={<Orders />} />
-          <Route path='/employees' element={<Employees />} />
-          <Route path='/customers' element={<Customers />} />
-          <Route path='/kanban' element={<KanBan />} />
-          <Route path='/editor' element={<Editor />} />
-          <Route path='/calendar' element={<Calendar />} />
-          <Route path='/color-picker' element={<ColorPicker />} />
-          <Route path='/line' element={<LineChart />} />
-          <Route path='/area' element={<AreaChart />} />
-          <Route path='/bar' element={<BarChart />} />
-          <Route path='/pie' element={<PieChart />} />
-          <Route path='/financial' element={<FinancialChart />} />
-          <Route path='/color-mapping' element={<ColorMappingChart />} />
-          <Route path='/pyramid' element={<Pyramid />} />
-          <Route path='/stacked' element={<Stacked />} />
-        </Routes>
+        <div>
+          <Routes>
+            <Route path='/' element={<Ecommerce />} />
+            <Route path='/ecommerce' element={<Ecommerce />} />
+            <Route path='/orders' element={<Orders />} />
+            <Route path='/employees' element={<Employees />} />
+            <Route path='/customers' element={<Customers />} />
+            <Route path='/kanban' element={<KanBan />} />
+            <Route path='/editor' element={<Editor />} />
+            <Route path='/calendar' element={<Calendar />} />
+            <Route path='/color-picker' element={<ColorPicker />} />
+            <Route path='/line' element={<LineChart />} />
+            <Route path='/area' element={<AreaChart />} />
+            <Route path='/bar' element={<BarChart />} />
+            <Route path='/pie' element={<PieChart />} />
+            <Route path='/financial' element={<FinancialChart />} />
+            <Route path='/color-mapping' element={<ColorMappingChart />} />
+            <Route path='/pyramid' element={<Pyramid />} />
+            <Route path='/stacked' element={<Stacked />} />
+          </Routes>
+        </div>
       </div>
     </div>
   );
