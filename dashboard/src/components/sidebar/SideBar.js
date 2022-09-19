@@ -11,7 +11,15 @@ import { useStateContext } from '../../contexts/ContextProvider'
 
 const SideBar = () => {
 
-  const { activeMenu, setActiveMenu } = useStateContext()
+  const { activeMenu, setActiveMenu, screenSize } = useStateContext()
+
+  const handleClose = () => {
+    if (activeMenu && screenSize <= 900) {
+      setActiveMenu(false)
+    } else {
+      setActiveMenu(true)
+    }
+  }
 
 
   const activeLink = 'flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-white text-md m-2'
@@ -22,7 +30,7 @@ const SideBar = () => {
     <div className="ml-3 h-screen md:overflow-hidden overflow-auto md:hover:overflow-auto pb-10">
       {activeMenu && (<>
         <div className="flex justify-between items-center">
-          <Link to='/' className="items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tracking-tight dark:text-white text-slate-900" onClick={() => setActiveMenu(false)}>
+          <Link to='/' className="items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tracking-tight dark:text-white text-slate-900" onClick={handleClose}>
             <SiShopware /> <span>Shopp</span>
           </Link>
           <TooltipComponent content="Menu" position='BottomCenter'>
