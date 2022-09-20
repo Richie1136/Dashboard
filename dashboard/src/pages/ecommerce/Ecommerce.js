@@ -1,10 +1,10 @@
 import { BsCurrencyDollar } from "react-icons/bs"
 import { GoPrimitiveDot } from "react-icons/go"
 
-import { Stacked, PieChart } from '../../index'
+import { PieChart } from '../../index'
 
 import { earningData, SparklineAreaData, ecomPieChartData } from "../../data/dummy"
-import { Button, SparkLine } from "../../components"
+import { Button, SparkLine, Stacked } from "../../components"
 import { useStateContext } from "../../contexts/ContextProvider"
 
 
@@ -77,6 +77,12 @@ const Ecommerce = () => {
               <div className="mt-5">
                 <SparkLine color="blue" data={SparklineAreaData} currentColor="blue" id="line-sparkline" type="Line" height="80px" width="250px" />
               </div>
+              <div className="mt-10">
+                <Button color="white" bgColor="blue" text="Download Report" borderRadius='10px' />
+              </div>
+            </div>
+            <div>
+              <Stacked width="320px" height="360px" />
             </div>
           </div>
         </div>
