@@ -4,8 +4,13 @@ import { stackedCustomSeries, stackedPrimaryXAxis, stackedPrimaryYAxis } from ".
 
 const Stacked = ({ width, height }) => {
   return (
-    <ChartComponent id="stack chart" width={width} height={height}>
+    <ChartComponent legendSettings={{ backgroundColor: 'white' }} tooltip={{ enable: true }} id="charts" primaryXAxis={stackedPrimaryXAxis} primaryYAxis={stackedPrimaryYAxis} chartArea={{ border: { width: 0 } }} width={width} height={height}>
       <Inject services={[Legend, Category, StackingColumnSeries, Tooltip]} />
+      <SeriesCollectionDirective>
+        {stackedCustomSeries?.map((item, index) => (
+          <SeriesDirective key={index} {...item} />
+        ))}
+      </SeriesCollectionDirective>
     </ChartComponent>
   )
 }
