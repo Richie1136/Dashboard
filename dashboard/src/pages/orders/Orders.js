@@ -8,7 +8,7 @@ import { Header } from '../../components'
 const Orders = () => {
   return (
     <div>
-      <Header title="Orders" />
+      <Header category="Page" title="Orders" />
     </div>
   )
 }
