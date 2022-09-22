@@ -39,6 +39,9 @@ function App() {
             <NavBar />
           </div>
           <div>
+
+            <ThemeSettings />
+
             <Routes>
               <Route path='/' element={<Ecommerce />} />
               <Route path='/ecommerce' element={<Ecommerce />} />
