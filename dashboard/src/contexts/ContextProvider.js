@@ -16,6 +16,7 @@ export const ContextProvider = ({ children }) => {
   const [screenSize, setScreenSize] = useState(undefined)
   const [currentColor, setCurrentColor] = useState('#03c9d7')
   const [currentMode, setCurrentMode] = useState('Light')
+  const [themeSettings, setThemeSettings] = useState(false)
 
   const handleClick = (clicked) => {
     setIsClicked({ ...initialState, [clicked]: true })
@@ -40,7 +41,11 @@ export const ContextProvider = ({ children }) => {
     handleClick,
     screenSize,
     setScreenSize,
-    currentColor, currentMode, setCurrentColor, setCurrentMode
+    currentColor,
+    currentMode,
+    setCurrentColor,
+    setCurrentMode,
+    themeSettings, setThemeSettings
   }
 
   return (
