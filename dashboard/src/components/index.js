@@ -27,5 +27,6 @@ export { default as Editor } from '../pages/editor/Editor'
 export { default as Employees } from '../pages/employees/Employees'
 export { default as KanBan } from '../pages/kanban/KanBan'
 export { default as Orders } from '../pages/orders/Orders'
+export { default as LineCharts } from '../components/linecharts/LineCharts'
 
 
