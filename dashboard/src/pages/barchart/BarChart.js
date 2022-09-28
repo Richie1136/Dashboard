@@ -1,4 +1,4 @@
-import { ChartComponent, SeriesCollectionDirective, SeriesDirective, BarSeries, Inject, DateTime, Legend, ColumnSeries, Tooltip, Category, DataLabel } from "@syncfusion/ej2-react-charts"
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Legend, ColumnSeries, Tooltip, Category, DataLabel } from "@syncfusion/ej2-react-charts"
 
 import { barCustomSeries, barPrimaryXAxis, barPrimaryYAxis } from "../../data/dummy"
 

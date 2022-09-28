@@ -1,4 +1,4 @@
-import { ChartComponent, SeriesCollectionDirective, SeriesDirective, BarSeries, Inject, DateTime, Legend, ColumnSeries, Tooltip, Category, DataLabel, HiloSeries, Logarithmic, Crosshair, Zoom } from "@syncfusion/ej2-react-charts"
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, DateTime, Tooltip, HiloSeries, Logarithmic, Crosshair, Zoom } from "@syncfusion/ej2-react-charts"
 
 import { financialChartData, FinancialPrimaryXAxis, FinancialPrimaryYAxis } from "../../data/dummy"
 
@@ -26,7 +26,6 @@ const FinancialChart = () => {
       <div className="w-full">
         <ChartComponent id='Financial Chart' height="420px" background={currentMode === 'Dark' ? '#FFD580' : '#fff'} crosshair={{ enable: true, lineType: 'Vertical', line: { width: 0 } }} primaryXAxis={FinancialPrimaryXAxis} primaryYAxis={FinancialPrimaryYAxis} chartArea={{ border: { width: 0 } }} tooltip={{ enable: true }}>
           <Inject services={[HiloSeries, Tooltip, DateTime, Logarithmic, Crosshair, Zoom]} />
-          {/* <FinancialChart /> */}
           <SeriesCollectionDirective>
             <SeriesDirective dataSource={returnValue} xName="x" yName="low" name="Apple Inc." type="Hilo" low="low" high="high" />
           </SeriesCollectionDirective>
