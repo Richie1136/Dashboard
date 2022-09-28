@@ -1,6 +1,3 @@
-
-
-
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, BarSeries, Inject, DateTime, Legend, ColumnSeries, Tooltip, Category, DataLabel, RangeColorSettingsDirective, RangeColorSettingDirective } from "@syncfusion/ej2-react-charts"
 
 import { colorMappingData, ColorMappingPrimaryXAxis, ColorMappingPrimaryYAxis, rangeColorMapping } from "../../data/dummy"
