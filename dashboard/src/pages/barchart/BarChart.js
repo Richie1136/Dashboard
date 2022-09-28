@@ -8,14 +8,14 @@ import { Header } from "../../components"
 
 
 
-const AreaChart = () => {
+const BarChart = () => {
 
   const { currentMode } = useStateContext()
 
   return (
     <div className='m-4 md:m-10 mt-24 p-10 bg-white dark:bg-secondary-dark-bg rounded-3xl'>
-      <Header category="Area" title="Inflation Rate in Percentage" />
-      <ChartComponent id='area-chart' height="420px" background={currentMode === 'Dark' ? '#FFD580' : '#fff'} primaryXAxis={barPrimaryXAxis} primaryYAxis={barPrimaryYAxis} chartArea={{ border: { width: 0 } }} tooltip={{ enable: true }}>
+      <Header category="Bar" title="Olympic Medal Counts - RIO" />
+      <ChartComponent id='Bar Charts' height="420px" background={currentMode === 'Dark' ? '#FFD580' : '#fff'} primaryXAxis={barPrimaryXAxis} primaryYAxis={barPrimaryYAxis} chartArea={{ border: { width: 0 } }} tooltip={{ enable: true }}>
         <Inject services={[ColumnSeries, Legend, Tooltip, Category, DataLabel]} />
         <SeriesCollectionDirective>
           {barCustomSeries.map((item, index) => (
@@ -27,4 +27,4 @@ const AreaChart = () => {
   )
 }
 
-export default AreaChart
+export default BarChart
