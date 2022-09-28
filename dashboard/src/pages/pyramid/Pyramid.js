@@ -1,6 +1,6 @@
-import { ChartComponent, SeriesCollectionDirective, SeriesDirective, BarSeries, Inject, DateTime, Legend, ColumnSeries, Tooltip, Category, DataLabel, RangeColorSettingsDirective, RangeColorSettingDirective, AccumulationChartComponent, AccumulationDataLabel, AccumulationTooltip, PyramidSeries, AccumulationLegend, AccumulationSelection, AccumulationSeriesCollectionDirective, AccumulationSeriesDirective } from "@syncfusion/ej2-react-charts"
+import { Inject, AccumulationChartComponent, AccumulationDataLabel, AccumulationTooltip, PyramidSeries, AccumulationLegend, AccumulationSelection, AccumulationSeriesCollectionDirective, AccumulationSeriesDirective } from "@syncfusion/ej2-react-charts"
 
-import { PyramidData, ColorMappingPrimaryXAxis, ColorMappingPrimaryYAxis, rangeColorMapping } from "../../data/dummy"
+import { PyramidData, ColorMappingPrimaryXAxis, ColorMappingPrimaryYAxis } from "../../data/dummy"
 
 import { useStateContext } from "../../contexts/ContextProvider"
 

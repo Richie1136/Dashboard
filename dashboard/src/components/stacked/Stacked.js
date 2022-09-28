@@ -2,9 +2,16 @@ import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Leg
 
 import { stackedCustomSeries, stackedPrimaryXAxis, stackedPrimaryYAxis } from "../../data/dummy"
 
-const Stacked = ({ width, height }) => {
+
+import { useStateContext } from "../../contexts/ContextProvider"
+
+
+const StackedChart = ({ width, height }) => {
+
+  const { currentMode } = useStateContext()
+
   return (
-    <ChartComponent legendSettings={{ backgroundColor: 'white' }} tooltip={{ enable: true }} id="charts" primaryXAxis={stackedPrimaryXAxis} primaryYAxis={stackedPrimaryYAxis} chartArea={{ border: { width: 0 } }} width={width} height={height}>
+    <ChartComponent legendSettings={{ backgroundColor: 'white' }} tooltip={{ enable: true }} id="charts" background={currentMode === 'Dark' ? '#33373e' : '#fff'} primaryXAxis={stackedPrimaryXAxis} primaryYAxis={stackedPrimaryYAxis} chartArea={{ border: { width: 0 } }} width={width} height={height}>
       <Inject services={[Legend, Category, StackingColumnSeries, Tooltip]} />
       <SeriesCollectionDirective>
         {stackedCustomSeries?.map((item, index) => (
@@ -15,4 +22,4 @@ const Stacked = ({ width, height }) => {
   )
 }
 
-export default Stacked
+export default StackedChart
