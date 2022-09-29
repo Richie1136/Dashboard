@@ -15,6 +15,20 @@ const Cart = () => {
           <p className="font-semibold text-lg">Shopping Cart</p>
           <Button icon={<MdOutlineCancel />} color="rgb(153,171,180)" bgHoverColor="light-gray" size="2xl" borderRadius="50%" />
         </div>
+        {cartData?.map((item, index) => (
+          <div key={index}>
+            <div>
+              <div className="flex items-center leading-8 gap-5 border-b-1 border-color dark:border-gray-600 p-4">
+                <img className="rounded-lg h-80 w-24" src={item.image} alt='Cart' />
+                <div>
+                  <p className="font-semibold">{item.name}</p>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm font-semibold">{item.category}</p>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   )
