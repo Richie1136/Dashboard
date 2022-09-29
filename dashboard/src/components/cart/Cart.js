@@ -23,7 +23,9 @@ const Cart = () => {
                 <div>
                   <p className="font-semibold">{item.name}</p>
                   <p className="text-gray-600 dark:text-gray-400 text-sm font-semibold">{item.category}</p>
-
+                  <div className="flex gap-4 mt-2 items-center">
+                    <p className="font-semibold text-lg">{item.price}</p>
+                  </div>
                 </div>
               </div>
             </div>
