@@ -4,8 +4,6 @@ import { lineCustomSeries, LinePrimaryYAxis, LinePrimaryXAxis } from "../../data
 
 import { useStateContext } from "../../contexts/ContextProvider"
 
-
-
 const LineCharts = () => {
 
   const { currentMode } = useStateContext()

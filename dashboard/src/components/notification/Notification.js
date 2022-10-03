@@ -3,7 +3,6 @@ import { Button } from '../index'
 import { chatData } from "../../data/dummy"
 import { useStateContext } from "../../contexts/ContextProvider"
 
-
 const Notification = () => {
 
   const { currentColor } = useStateContext()
@@ -27,6 +26,9 @@ const Notification = () => {
             </div>
           </div>
         ))}
+        <div className="mt-5">
+          <Button color="white" bgColor={currentColor} text="See all Notifications" borderRadius="10px" width="full" />
+        </div>
       </div>
     </div>
   )

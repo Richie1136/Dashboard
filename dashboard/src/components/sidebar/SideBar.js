@@ -6,9 +6,6 @@ import { TooltipComponent } from "@syncfusion/ej2-react-popups"
 import { links } from '../../data/dummy'
 import { useStateContext } from '../../contexts/ContextProvider'
 
-
-
-
 const SideBar = () => {
 
   const { activeMenu, setActiveMenu, screenSize, currentColor } = useStateContext()
@@ -20,7 +17,6 @@ const SideBar = () => {
       setActiveMenu(true)
     }
   }
-
 
   const activeLink = 'flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-white text-md m-2'
 
