@@ -4,7 +4,7 @@ import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns'
 
 
 import { earningData, SparklineAreaData, ecomPieChartData, dropdownData, recentTransactions } from "../../data/dummy"
-import { Button, SparkLine, Stacked, Pie } from "../../components"
+import { Button, SparkLine, Stacked, Pie, LineChart, LineCharts } from "../../components"
 import { useStateContext } from "../../contexts/ContextProvider"
 
 
@@ -140,6 +140,21 @@ const Ecommerce = () => {
                 <p className={`text-${item.pcColor}`}>{item.amount}</p>
               </div>
             ))}
+          </div>
+          <div className="flex justify-between items-center mt-5 border-t-1 border-color">
+            <div className="mt-3">
+              <Button color='white' bgColor={currentColor} text="Add" borderRadius="10px" />
+            </div>
+            <p className="text-gray-400 text-sm">40 Recent Transactions</p>
+          </div>
+        </div>
+        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg p-6 rounded-2xl w-96 md:w-760">
+          <div className="flex justify-between items-center gap-2 mb-10">
+            <p className="text-xl font-semibold">Sales Overview</p>
+            <DropDown currentMode={currentMode} />
+          </div>
+          <div className="md:w-full overflow-auto">
+            <LineCharts />
           </div>
         </div>
       </div>
