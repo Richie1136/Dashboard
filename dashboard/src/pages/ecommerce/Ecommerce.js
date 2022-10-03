@@ -2,10 +2,9 @@ import { BsCurrencyDollar } from "react-icons/bs"
 import { GoPrimitiveDot } from "react-icons/go"
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns'
 
-import { PieChart } from '../../index'
 
 import { earningData, SparklineAreaData, ecomPieChartData, dropdownData } from "../../data/dummy"
-import { Button, SparkLine, Stacked } from "../../components"
+import { Button, SparkLine, Stacked, Pie } from "../../components"
 import { useStateContext } from "../../contexts/ContextProvider"
 
 
@@ -107,6 +106,15 @@ const Ecommerce = () => {
             </div>
             <div className="mt-4">
               <SparkLine currentColor={currentColor} id='column-sparkline' height="100px" type='Column' data={SparklineAreaData} width="320" color="rgb(242,252,253)" />
+            </div>
+          </div>
+          <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl md:w-400 p-8 m-3 flex justify-center items-center gap-10">
+            <div>
+              <p className="text-2xl font-semibold">$45,000</p>
+              <p className="text-gray-400">Yearly Sales</p>
+            </div>
+            <div className="w-40">
+              <Pie id="pie-chart" data={ecomPieChartData} legendVisiblity={false} height="160px" />
             </div>
           </div>
         </div>
