@@ -1,15 +1,23 @@
 import { BsCurrencyDollar } from "react-icons/bs"
 import { GoPrimitiveDot } from "react-icons/go"
+import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns'
 
 import { PieChart } from '../../index'
 
-import { earningData, SparklineAreaData, ecomPieChartData } from "../../data/dummy"
+import { earningData, SparklineAreaData, ecomPieChartData, dropdownData } from "../../data/dummy"
 import { Button, SparkLine, Stacked } from "../../components"
 import { useStateContext } from "../../contexts/ContextProvider"
 
 
+
+const DropDown = ({ currentMode }) => (
+  <div>
+    <DropDownListComponent id='time' title={{ text: 'Time', value: 'Id' }} style={{ border: 'none', color: (currentMode === 'Dark') && 'white' }} value="1" dataSource={dropdownData} popupHeight="220px" popupWidth="120px" />
+  </div>
+)
+
 const Ecommerce = () => {
-  const { currentColor } = useStateContext()
+  const { currentColor, currentMode } = useStateContext()
 
   return (
     <div className="mt-12">
@@ -84,7 +92,7 @@ const Ecommerce = () => {
               </div>
             </div>
             <div>
-              <Stacked width="320px" height="360px" />
+              <Stacked currentMode={currentMode} width="320px" height="360px" />
             </div>
           </div>
         </div>
