@@ -3,7 +3,7 @@ import { GoPrimitiveDot } from "react-icons/go"
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns'
 
 
-import { earningData, SparklineAreaData, ecomPieChartData, dropdownData, recentTransactions, weeklyStats } from "../../data/dummy"
+import { earningData, SparklineAreaData, ecomPieChartData, dropdownData, recentTransactions, weeklyStats, medicalproBranding } from "../../data/dummy"
 import { Button, SparkLine, Stacked, Pie, LineChart, LineCharts } from "../../components"
 import { useStateContext } from "../../contexts/ContextProvider"
 import { IoIosMore } from "react-icons/io"
@@ -188,6 +188,20 @@ const Ecommerce = () => {
         <div className="w-400 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl p-6 m-3">
           <div className="flex justify-between">
             <p className="text-xl font-semibold">MedicalPro Branding</p>
+            <button type='button' className="text-xl font-semibold text-gray-400">
+              <IoIosMore />
+            </button>
+          </div>
+          <p className="text-xs cursor-pointer hover:drop-shadow-xl font-semibold rounded-lg w-24 bg-orange-400 py-0.5 px-2 text-gray-200 mt-10">
+            16 APR, 2021
+          </p>
+          <div className="flex gap-4 border-b-1 border-color mt-6">
+            {medicalproBranding.data.map((item) => (
+              <div key={item.title} className="border-r-1 border-color pr-4 pb-2">
+                <p className="text-xs text-gray-400">{item.title}</p>
+                <p className="text-sm">{item.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
