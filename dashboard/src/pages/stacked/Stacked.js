@@ -1,7 +1,4 @@
-
-
-import { Header } from "../../components"
-import StackedChart from "../../components/stacked/Stacked"
+import { Header, StackedChart } from "../../components"
 
 
 const Stacked = () => (

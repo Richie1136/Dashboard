@@ -4,7 +4,7 @@ import { stackedCustomSeries, stackedPrimaryXAxis, stackedPrimaryYAxis } from ".
 
 import { useStateContext } from "../../contexts/ContextProvider"
 
-const StackedChart = ({ width, height }) => {
+const Stacked = ({ width, height }) => {
 
   const { currentMode } = useStateContext()
 
@@ -20,4 +20,4 @@ const StackedChart = ({ width, height }) => {
   )
 }
 
-export default StackedChart
+export default Stacked

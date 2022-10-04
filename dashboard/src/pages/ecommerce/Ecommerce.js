@@ -21,7 +21,7 @@ const Ecommerce = () => {
   const { currentColor, currentMode } = useStateContext()
 
   return (
-    <div className="mt-12">
+    <div className="mt-24">
       <div className="flex flex-wrap lg:flex-nowrap justify-center">
         <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg h-44 rounded-xl w-full lg:w-80 p-8 pt-9 m-3 bg-hero-pattern bg-no-repeat bg-cover bg-center">
           <div className="flex justify-between items-center">
@@ -29,6 +29,9 @@ const Ecommerce = () => {
               <p className="font-bold text-gray-400">Earnings</p>
               <p className="text-2xl">$50,500.50</p>
             </div>
+            <button type='button' style={{ backgroundColor: currentColor }} className="text-2xl opacity-0.9 text-white hover:drop-shadow-xl rounded-full p-4">
+              <BsCurrencyDollar />
+            </button>
           </div>
           <div className="mt-6">
             <Button color='white' bgColor={currentColor} text='Download' borderRadius="10px" size="md" />
@@ -206,7 +209,7 @@ const Ecommerce = () => {
           </div>
           <div className="border-b-1 border-color pb-4 mt-2">
             <p className="text-md font-semibold mb-2">Teams</p>
-            <div className="flex-gap-4">
+            <div className="flex gap-4">
               {medicalproBranding.teams.map((item) => (
                 <p key={item.name} style={{ background: item.color }} className="cursor-pointer hover:drop-shadow-xl text-white py-0.5 px-3 rounded-lg text-xs">
                   {item.name}
@@ -238,6 +241,9 @@ const Ecommerce = () => {
           </div>
           <div className="mt-10">
             <img className="md:w-96 h-50" src={product9} alt="" />
+            <div className="mt-3">
+              <Button color="white" bgColor={currentColor} text="Read More" borderRadius="10px" />
+            </div>
           </div>
         </div>
       </div>
