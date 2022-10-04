@@ -7,6 +7,7 @@ import { earningData, SparklineAreaData, ecomPieChartData, dropdownData, recentT
 import { Button, SparkLine, Stacked, Pie, LineChart, LineCharts } from "../../components"
 import { useStateContext } from "../../contexts/ContextProvider"
 import { IoIosMore } from "react-icons/io"
+import product9 from '../../data/product9.jpeg'
 
 
 
@@ -225,6 +226,18 @@ const Ecommerce = () => {
             <div className="mt-3">
               <Button color='white' bgColor={currentColor} text="Add" borderRadius="10px" />
             </div>
+            <p className="text-gray-400 text-sm">40 Recent Transactions</p>
+          </div>
+        </div>
+        <div className="w-400 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl p-6 m-3">
+          <div className="flex justify-between">
+            <p className="text-xl font-semibold">Daily Activities</p>
+            <button type="button" className="text-xl font-semibold text-gray-500">
+              <IoIosMore />
+            </button>
+          </div>
+          <div className="mt-10">
+            <img className="md:w-96 h-50" src={product9} alt="" />
           </div>
         </div>
       </div>
