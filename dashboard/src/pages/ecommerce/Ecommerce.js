@@ -177,8 +177,17 @@ const Ecommerce = () => {
                     <p className="text-sm text-gray-400">{item.desc}</p>
                   </div>
                 </div>
+                <p className={`text-${item.pcColor}`}>{item.amount}</p>
               </div>
             ))}
+            <div className="mt-4">
+              <SparkLine currentColor={currentColor} id='area-sparkline' height='160px' type="Area" data={SparklineAreaData} width='320' color="rgb(242,252,253)" />
+            </div>
+          </div>
+        </div>
+        <div className="w-400 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl p-6 m-3">
+          <div className="flex justify-between">
+            <p className="text-xl font-semibold">MedicalPro Branding</p>
           </div>
         </div>
       </div>
