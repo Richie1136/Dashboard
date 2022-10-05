@@ -6,8 +6,6 @@ import { useStateContext } from "../../contexts/ContextProvider"
 
 import { Header } from "../../components"
 
-
-
 const ColorMappingChart = () => {
 
   const { currentMode } = useStateContext()

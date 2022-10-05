@@ -2,7 +2,6 @@ import { AccumulationChartComponent, AccumulationSeriesCollectionDirective, Accu
 
 import { useStateContext } from "../../contexts/ContextProvider"
 
-
 const Pie = ({ id, data, legendVisiblity, height }) => {
   const { currentMode } = useStateContext()
 
@@ -14,8 +13,6 @@ const Pie = ({ id, data, legendVisiblity, height }) => {
       </AccumulationSeriesCollectionDirective>
     </AccumulationChartComponent>
   )
-
-
 }
 
 export default Pie

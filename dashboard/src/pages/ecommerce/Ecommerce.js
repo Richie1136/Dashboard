@@ -4,7 +4,7 @@ import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns'
 
 
 import { earningData, SparklineAreaData, ecomPieChartData, dropdownData, recentTransactions, weeklyStats, medicalproBranding } from "../../data/dummy"
-import { Button, SparkLine, Stacked, Pie, LineChart, LineCharts } from "../../components"
+import { Button, SparkLine, Stacked, Pie, LineCharts } from "../../components"
 import { useStateContext } from "../../contexts/ContextProvider"
 import { IoIosMore } from "react-icons/io"
 import product9 from '../../data/product9.jpeg'

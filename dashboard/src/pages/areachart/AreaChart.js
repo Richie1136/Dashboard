@@ -6,8 +6,6 @@ import { useStateContext } from "../../contexts/ContextProvider"
 
 import { Header } from "../../components"
 
-
-
 const AreaChart = () => {
 
   const { currentMode } = useStateContext()
